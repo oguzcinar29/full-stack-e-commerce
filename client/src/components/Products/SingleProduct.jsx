@@ -60,7 +60,6 @@ export default function SingleProduct() {
     setCount(1);
   }
 
-  console.log(cartArr);
   return (
     <div className="single-pro-container">
       <div className="single-pro-box">

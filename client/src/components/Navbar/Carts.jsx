@@ -42,8 +42,6 @@ export default function Carts() {
     return total;
   };
 
-  console.log(currentUser);
-
   const makePayment = async () => {
     const stripe = await loadStripe(
       "pk_test_51OiC9BBkBthUpas9ydkZXhW1LW7x9nkEV1K0R5263whn4G0V44JQscWxgKNB3GTqdegSnqJ5M8X9UNmyI5FM90HF00X7YACBy6"
