@@ -30,17 +30,17 @@ export const getUserInfo = async (req, res) => {
             })
             .status(200);
           currentUser1 = findUser;
-          res.redirect("/");
+          res.redirect("https://full-stack-e-commerce-eight.vercel.app");
         } else {
           passCheckh = true;
           emailExist = false;
-          res.redirect("/login");
+          res.redirect("https://full-stack-e-commerce-eight.vercel.app/login");
         }
       });
     } else {
       emailExist = true;
       passCheckh = false;
-      res.redirect("/login");
+      res.redirect("https://full-stack-e-commerce-eight.vercel.app/login");
     }
   } catch (err) {
     console.log(err);
@@ -61,10 +61,10 @@ export const createUser = async (req, res) => {
         );
       });
       emailUsed = false;
-      res.redirect("/login");
+      res.redirect("https://full-stack-e-commerce-eight.vercel.app/login");
     } else {
       emailUsed = true;
-      res.redirect("/register");
+      res.redirect("https://full-stack-e-commerce-eight.vercel.app/register");
     }
   } catch (err) {
     console.log(err);
@@ -79,7 +79,7 @@ export const logout = (req, res) => {
       secure: true,
     })
     .status(200);
-  res.redirect("/");
+  res.redirect("https://full-stack-e-commerce-eight.vercel.app/");
 };
 
 export const getRegisterInfo = (req, res) => {

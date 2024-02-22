@@ -22,5 +22,7 @@ export const getRadioValue = (req, res) => {
     cat = "misc";
   } else {
   }
-  res.redirect(`/${cat.toLowerCase()}`);
+  res.redirect(
+    `https://full-stack-e-commerce-eight.vercel.app/${cat.toLowerCase()}`
+  );
 };
