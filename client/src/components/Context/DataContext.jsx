@@ -7,10 +7,14 @@ export const DataProvider = ({ children }) => {
   const [passwordAlert, setPassAlert] = useState(false);
   const [products, setProducts] = useState([{}]);
 
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(
+    localStorage.getItem("user") || null
+  );
 
   const [cartArr, setCartArr] = useState(
-    JSON.parse(window.localStorage.getItem("cart"))
+    localStorage.getItem("user") !== "null"
+      ? JSON.parse(window.localStorage.getItem("cart"))
+      : null
   );
   useEffect(() => {
     fetch(
