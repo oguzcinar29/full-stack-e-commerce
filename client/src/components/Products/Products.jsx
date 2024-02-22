@@ -58,7 +58,7 @@ export default function Products({ category }) {
                 onChange={handleChange2}
               >
                 <form
-                  action="/api/products/radio-value"
+                  action="https://full-stack-e-commerce.onrender.com/api/products/radio-value"
                   className="form-radio"
                   method="post"
                 >

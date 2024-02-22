@@ -16,7 +16,10 @@ export default function Register() {
   return (
     <div className="auth-container">
       <div className="auth-box">
-        <form action="/api/auth/register" method="post">
+        <form
+          action="https://full-stack-e-commerce.onrender.com/api/auth/register"
+          method="post"
+        >
           <input
             type="text"
             name="username"

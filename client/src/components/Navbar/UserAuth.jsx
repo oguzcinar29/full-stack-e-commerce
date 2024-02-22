@@ -13,7 +13,10 @@ export default function UserAuth() {
         </Link>
       )}
       {currentUser !== null && (
-        <form action="/api/auth/logout" method="post">
+        <form
+          action="https://full-stack-e-commerce.onrender.com/api/auth/logout"
+          method="post"
+        >
           <input className="btn-user2 " type="submit" value="Logged Out" />
         </form>
       )}

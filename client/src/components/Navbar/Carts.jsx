@@ -54,11 +54,14 @@ export default function Carts() {
     const headers = {
       "Content-Type": "application/json",
     };
-    const response = await fetch("/api/carts/create-checkout-session", {
-      method: "POST",
-      headers: headers,
-      body: JSON.stringify(body),
-    });
+    const response = await fetch(
+      "https://full-stack-e-commerce.onrender.com/api/carts/create-checkout-session",
+      {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify(body),
+      }
+    );
     const session = await response.json();
     const result = stripe.redirectToCheckout({
       sessionId: session.id,

@@ -11,7 +11,10 @@ export default function Login() {
   return (
     <div className="auth-container">
       <div className="auth-box">
-        <form action="/api/auth/login" method="post">
+        <form
+          action="https://full-stack-e-commerce.onrender.com/api/auth/login"
+          method="post"
+        >
           <label>Email</label>
           <input
             type="text"

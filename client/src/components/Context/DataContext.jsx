@@ -15,14 +15,18 @@ export const DataProvider = ({ children }) => {
     JSON.parse(window.localStorage.getItem("cart"))
   );
   useEffect(() => {
-    fetch("/api/auth/get-register-info")
+    fetch(
+      "https://full-stack-e-commerce.onrender.com/api/auth/get-register-info"
+    )
       .then((res) => res.json())
       .then((data) => {
         setEmailAlert(data.emailExist);
         setPassAlert(data.passCheckh);
         setCurrentUser(data.currentUser1);
       });
-    fetch("/api/products/get-products")
+    fetch(
+      "https://full-stack-e-commerce.onrender.com/api/products/get-products"
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
