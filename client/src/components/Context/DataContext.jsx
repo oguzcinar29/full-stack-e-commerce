@@ -7,9 +7,7 @@ export const DataProvider = ({ children }) => {
   const [passwordAlert, setPassAlert] = useState(false);
   const [products, setProducts] = useState([{}]);
 
-  const [currentUser, setCurrentUser] = useState(
-    localStorage.getItem("user") || null
-  );
+  const [currentUser, setCurrentUser] = useState(null);
 
   const [cartArr, setCartArr] = useState(
     JSON.parse(window.localStorage.getItem("cart"))

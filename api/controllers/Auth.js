@@ -29,7 +29,7 @@ export const getUserInfo = async (req, res) => {
               httpOnly: true,
             })
             .status(200);
-          currentUser1 = findUser;
+          currentUser1 = other;
           res.redirect("https://full-stack-e-commerce-eight.vercel.app");
         } else {
           passCheckh = true;
